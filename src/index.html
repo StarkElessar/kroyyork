@@ -8,7 +8,34 @@
       @@include('html/header.html', {})
       <main class="page">
         <div data-observ></div>
-        
+        <section class="page__contact-form contact-form">
+          <div class="contact-form__container">
+            <div class="contact-form__image-ibg">
+              <img src="@img/contact-bg.png" alt="Woman">
+            </div>
+            <div class="contact-form__content">
+              <form class="contact-form__form">
+                <h2 class="contact-form__title title">Получите оптовое предложение</h2>
+                <p class="contact-form__text">Контактные данные</p>
+                <div class="contact-form__field">
+                  <input class="contact-form__input" type="text" placeholder="Имя" name="userName">
+                </div>
+                <div class="contact-form__field">
+                  <input class="contact-form__input" type="tel" placeholder="Телефон" name="userPhone">
+                </div>
+                <div class="contact-form__field">
+                  <input class="contact-form__input" type="email" placeholder="E-mail" name="userEmail">
+                </div>
+                <div class="contact-form__box">
+                  <button class="contact-form__button button" type="submit">Получить</button>
+                  <p class="contact-form__text-info">
+                    Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/footer.html', {})
     </div>
