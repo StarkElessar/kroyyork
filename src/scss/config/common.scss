@@ -1,1 +1,40 @@
 // Заголовки, общие БЄМ блоки и проче...
+.title {
+  font-weight: 700;
+  font-size: rem(46);
+  line-height: prc(56, 46);
+  font-family: PlayfairDisplay;
+  @include media(490) {
+    font-size: rem(24);
+    line-height: prc(34, 24);
+  }
+}
+.icon-check {
+  flex: 0 0 rem(36);
+  height: rem(36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: rem(400);
+  padding: rem(24) 0;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.012em;
+  font-weight: 500;
+  background-color: $firstAccentColor;
+  transition: $standartTrans;
+  @include media(768) {
+    width: rem(360);
+  }
+  @include media(490) {
+    padding: rem(16) 0;
+  }
+  &:hover {
+    background-color: $hoverColor;
+  }
+  &:focus {
+    background-color: $focusColor;
+  }
+}
