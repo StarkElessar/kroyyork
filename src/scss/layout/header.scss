@@ -16,6 +16,9 @@
   &__logo {
     width: rem(104);
     height: rem(50);
+    img {
+      max-width: 100%;
+    }
     @include media(768) {
       order: 2;
     }
