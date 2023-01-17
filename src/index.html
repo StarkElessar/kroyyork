@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    'title': 'Главная'
-  })
-  <body>
-    <div class="wrapper">
-      @@include('html/header.html', {})
-      <main class="page">
-        <div data-observ></div>
-        <section class="page__contact-form contact-form">
-          <div class="contact-form__container">
-            <div class="contact-form__image-ibg">
-              <img src="@img/contact-bg.png" alt="Woman">
-            </div>
-            <div class="contact-form__content">
-              <form class="contact-form__form">
-                <h2 class="contact-form__title title">Получите оптовое предложение</h2>
-                <p class="contact-form__text">Контактные данные</p>
-                <div class="contact-form__field">
-                  <input class="contact-form__input" type="text" placeholder="Имя" name="userName">
-                </div>
-                <div class="contact-form__field">
-                  <input class="contact-form__input" type="tel" placeholder="Телефон" name="userPhone">
-                </div>
-                <div class="contact-form__field">
-                  <input class="contact-form__input" type="email" placeholder="E-mail" name="userEmail">
-                </div>
-                <div class="contact-form__box">
-                  <button class="contact-form__button button" type="submit">Получить</button>
-                  <p class="contact-form__text-info">
-                    Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.
-                  </p>
-                </div>
-              </form>
-            </div>
+@@include('html/head.html', {
+'title': 'Главная'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <main class="page">
+      <div data-observ></div>
+      <section class="page__promo promo">
+        <div class="promo__container">
+          <div class="promo__content">
+            <h1 class="promo__title title">Оптовые поставки пальто Premium — класса</h1>
+            <ul class="promo__list">
+              <li class="promo__item">
+                <span class="promo__шеуь-icon icon-check">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="promo__item-text">натуральная шерсть альпака и кашемира</span>
+              </li>
+              <li class="promo__item">
+                <span class="promo__шеуь-icon icon-check">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="promo__item-text">более 100 моделей пальто в 20 цветах</span>
+              </li>
+              <li class="promo__item">
+                <span class="promo__шеуь-icon icon-check">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="promo__item-text">размерный ряд от 40 — до 58</span>
+              </li>
+            </ul>
+            <button class="promo__button button" type="button">Получить оптовый прайс-лист</button>
           </div>
-        </section>
-      </main>
-      @@include('html/footer.html', {})
-    </div>
-    @@include('html/script.html', {})
-  </body>
-</html> 
+          <div class="promo__image-ibg">
+            <img src="@img/promo-bg.png" alt="Women">
+          </div>
+        </div>
+      </section>
+      <section class="page__contact-form contact-form">
+        <div class="contact-form__container">
+          <div class="contact-form__image-ibg">
+            <img src="@img/contact-bg.png" alt="Woman">
+          </div>
+          <div class="contact-form__content">
+            <form class="contact-form__form">
+              <h2 class="contact-form__title title">Получите оптовое предложение</h2>
+              <p class="contact-form__text">Контактные данные</p>
+              <div class="contact-form__field">
+                <input class="contact-form__input" type="text" placeholder="Имя" name="userName">
+              </div>
+              <div class="contact-form__field">
+                <input class="contact-form__input" type="tel" placeholder="Телефон" name="userPhone">
+              </div>
+              <div class="contact-form__field">
+                <input class="contact-form__input" type="email" placeholder="E-mail" name="userEmail">
+              </div>
+              <div class="contact-form__box">
+                <button class="contact-form__button button" type="submit">Получить</button>
+                <p class="contact-form__text-info">
+                  Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Политикой
+                  конфиденциальности.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
