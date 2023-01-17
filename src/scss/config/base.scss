@@ -78,4 +78,11 @@ body {
   &_start {
     padding-top: rem($headerHeight);
   }
+
+  // .page__promo
+  &__promo {}
+  // .page__desc
+  &__desc {}
+  // .page__contact-form
+  &__contact-form {}
 }
