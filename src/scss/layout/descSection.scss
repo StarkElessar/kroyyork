@@ -1,9 +1,14 @@
 .desc {
   position: relative;
-  padding-top: rem(80);
-  padding-bottom: rem(150);
-  margin-bottom: rem(564);
+  @include adaptiveClamp('padding-top', 80, 60, 1920, 768, 1);
+  @include adaptiveClamp('padding-bottom', 150, 112, 1920, 768, 1);
+  @include adaptiveClamp('margin-bottom', 564, 280, 1920, 768, 1);
   background-color: $purplishColor;
+  @include media(540) {
+    margin-bottom: 0;
+    padding-top: rem(30);
+    padding-bottom: rem(43);
+  }
   // .desc__container
   &__container {
   }
@@ -14,9 +19,14 @@
     color: #fff;
     text-align: center;
     font-family: PlayfairDisplay;
-    font-size: rem(32);
+    @include adaptiveClamp('font-size', 32, 28, 1920, 768, 1);
     line-height: prc(46,32);
     font-weight: 400;
+    @include media(540) {
+      font-size: rem(16);
+      line-height: prc(26, 16);
+      margin-bottom: rem(30);
+    }
   }
   // .desc__media
   &__media {}
@@ -25,19 +35,59 @@
 .slider-desc {
   position: absolute;
   left: 50%;
-  top: rem(298);
+  @include adaptiveClamp('top', 298, 220, 1920, 768, 1);
   transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  column-gap: rem(20);
+  @include media(726) {
+    @include adaptiveClamp('top', 240, 300, 726, 540, 1);
+  }
+  @include media(540) {
+    position: static;
+    transform: translate(0);
+  }
+  // .slider-desc__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+    @include media(726) {
+      column-gap: rem(12);
+    }
+    @include media(540) {
+      column-gap: rem(0);
+      padding-bottom: rem(22);
+    }
+  }
   // .slider-desc__image-ibg
   &__image-ibg {
-    width: rem(400);
-    height: rem(460);
     @include adaptiveClamp('width', 400, 200, 1920, 768, 1);
-    @include adaptiveClamp('height', 460, 320, 1920, 768, 1);
+    @include adaptiveClamp('height', 460, 272, 1920, 768, 1);
+    @include media(540) {
+      width: 100%;
+      height: rem(368);
+    }
     img {
       object-position: top;
+    }
+  }
+  // .slider-desc__progress-bar
+  &__progress-bar {
+    &.swiper-pagination {
+      top: auto;
+      bottom: 0;
+      background-color: transparent;
+      height: rem(3);
+      .swiper-pagination-progressbar-fill {
+        background-color: #fff;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: rem(1);
+      background-color: #fff;
     }
   }
 }

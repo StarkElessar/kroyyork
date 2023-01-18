@@ -6,6 +6,7 @@ const firstScreen = document.querySelector('[data-observ]')
 const burgerButton = document.querySelector('.icon-menu')
 const menu = document.querySelector('.menu')
 const lockPaddingElements = document.querySelectorAll('[data-lp]')
+const firstSlider = document.querySelector('.slider-desc')
 
 export {
   html,
@@ -16,4 +17,5 @@ export {
   burgerButton,
   menu,
   lockPaddingElements,
+  firstSlider,
 }
