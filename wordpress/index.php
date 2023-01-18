@@ -34,7 +34,7 @@
             <button class="button promo__button" type="button">Получить оптовый прайс-лист</button>
           </div>
           <div class="promo__image-ibg">
-            <img src="images/promo-bg.png" alt="Women">
+            <img src="<?php echo get_template_directory_uri() ?>/images/promo-bg.png" alt="Women">
           </div>
         </div>
       </section>
@@ -44,23 +44,26 @@
             Все наши изделия проверены и имеют необходимые сертификаты качества, а также маркированы в соответствии с
             законом о чипировании товаров.
           </p>
-          <div class="desc__media slider-desc">
-            <div class="slider-desc__image-ibg">
-              <img src="images/desc/01.png" alt="Women">
+          <div class="desc__media slider-desc swiper" data-mobile="false">
+            <div class="slider-desc__wrapper swiper-wrapper">
+              <div class="slider-desc__image-ibg swiper-slide">
+                <img src="<?php echo get_template_directory_uri() ?>/images/desc/01.png" alt="Women">
+              </div>
+              <div class="slider-desc__image-ibg swiper-slide">
+                <img src="<?php echo get_template_directory_uri() ?>/images/desc/02.png" alt="Women">
+              </div>
+              <div class="slider-desc__image-ibg swiper-slide">
+                <img src="<?php echo get_template_directory_uri() ?>/images/desc/03.png" alt="Women">
+              </div>
             </div>
-            <div class="slider-desc__image-ibg">
-              <img src="images/desc/02.png" alt="Women">
-            </div>
-            <div class="slider-desc__image-ibg">
-              <img src="images/desc/03.png" alt="Women">
-            </div>
+            <div class="slider-desc__progress-bar swiper-pagination"></div>
           </div>
         </div>
       </section>
       <section class="contact-form page__contact-form">
         <div class="contact-form__container">
           <div class="contact-form__image-ibg">
-            <img src="images/contact-bg.png" alt="Woman">
+            <img src="<?php echo get_template_directory_uri() ?>/images/contact-bg.png" alt="Woman">
           </div>
           <div class="contact-form__content">
             <form class="contact-form__form">
