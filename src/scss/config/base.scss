@@ -28,6 +28,7 @@ body {
 		top: 0;
 		left: 0;
 		object-fit: cover;
+    object-position: top;
 	}
 }
 [class*="-ibg_contain"] {
@@ -83,6 +84,8 @@ body {
   &__promo {}
   // .page__desc
   &__desc {}
+  // .page__gallery
+  &__gallery {}
   // .page__contact-form
   &__contact-form {}
 }
