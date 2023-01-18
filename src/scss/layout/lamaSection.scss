@@ -1,0 +1,135 @@
+.lama {
+  padding: rem(120) 0 0;
+  @include media(768) {
+    padding: rem(60) 0 0;
+  }
+  @include media(490) {
+    padding: rem(20) 0 0;
+  }
+  // .lama__container
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  // .lama__image-bg
+  &__image-bg {
+    position: absolute;
+    top: 0;
+    right: rem(-300);
+    width: rem(635);
+    height: rem(750);
+    pointer-events: none;
+    @include media(768) {
+      width: rem(550);
+      height: rem(650);
+    }
+    @include media(490) {
+      width: rem(360);
+      height: rem(420);
+      right: rem(-140);
+      top: rem(150);
+    }
+  }
+  // .lama__title
+  &__title {
+    max-width: rem(525);
+    margin-bottom: rem(40);
+    @include media(490) {
+      margin-bottom: rem(10);
+    }
+  }
+  // .lama__desc
+  &__desc {
+    max-width: rem(545);
+    line-height: prc(26, 16);
+    margin-bottom: rem(64);
+    @include media(768) {
+      margin-bottom: rem(40);
+    }
+    @include media(490) {
+      margin-bottom: rem(20);
+      font-size: rem(14);
+      line-height: prc(26, 14);
+    }
+  }
+  // .lama__grid
+  &__grid {
+    position: relative;
+    max-width: rem(824);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(194), 1fr));
+    column-gap: rem(120);
+    row-gap: rem(40);
+    @include media(1024) {
+      column-gap: rem(20);
+      row-gap: rem(24);
+    }
+    @include media(490) {
+      column-gap: rem(12);
+      grid-template-columns: repeat(auto-fill, minmax(rem(110), 1fr));
+    }
+  }
+  // .lama__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(20);
+  }
+  // .lama__icon
+  &__icon {
+    width: rem(85);
+    height: rem(85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media(490) {
+      width: rem(54);
+      height: rem(54);
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  // .lama__text
+  &__text {
+    font-family: PlayfairDisplay;
+    font-size: rem(21);
+    line-height: prc(31, 21);
+    text-align: center;
+    font-weight: 400;
+    @include media(490) {
+      font-size: rem(16);
+      line-height: prc(24, 16);
+    }
+  }
+  // .lama__subtitle
+  &__subtitle {
+    margin-top: rem(70);
+    font-family: PlayfairDisplay;
+    font-size: rem(32);
+    line-height: prc(42, 32);
+    font-weight: 700;
+    @include media(768) {
+      margin-top: rem(50);
+    }
+    @include media(490) {
+      margin-top: rem(20);
+      font-size: rem(16);
+      line-height: prc(26, 16);
+    }
+  }
+  // .lama__button
+  &__button {
+    position: relative;
+    margin: rem(60) auto 0;
+    @include media(768) {
+      margin: rem(40) 0 0;
+    }
+    @include media(490) {
+      margin: rem(20) auto 0;
+      width: 100%;
+    }
+  }
+}

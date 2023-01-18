@@ -28,7 +28,7 @@ import { firstSlider } from './helpers/elementsNodeList'
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-import Swiper, { Pagination } from 'swiper'
+import Swiper, { Pagination, Autoplay } from 'swiper'
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = true
@@ -82,8 +82,8 @@ const mobileSliderInit = () => {
       direction: 'horizontal',
       spaceBetween: 15,
       pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
+        el: '.swiper-pagination',
+        type: 'progressbar',
       },
     })
 
@@ -98,6 +98,23 @@ const mobileSliderInit = () => {
     }
   }
 }
+
+new Swiper('.slider-auto', {
+  modules: [Pagination, Autoplay],
+  direction: 'horizontal',
+  autoplay: {
+    delay: 1500,
+  },
+  speed: 2000,
+  grabCursor: true,
+  loop: false,
+  spaceBetween: 20,
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+})
 
 mobileSliderInit()
 

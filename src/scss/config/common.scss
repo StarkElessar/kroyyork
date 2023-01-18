@@ -30,11 +30,23 @@
   }
   @include media(490) {
     padding: rem(16) 0;
+    font-size: rem(14);
   }
   &:hover {
     background-color: $hoverColor;
   }
   &:focus {
     background-color: $focusColor;
+  }
+}
+.image-decor-ibg {
+  width: rem(530);
+  height: rem(720);
+  @include media(768) {
+    width: calc(100% - 15px);
+    height: rem(400);
+  }
+  @include media(768) {
+    height: rem(190);
   }
 }
