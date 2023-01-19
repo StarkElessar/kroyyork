@@ -46,6 +46,33 @@
       </div>
     </footer>
   </div>
+  <div class="_overlay-bg offer-popup" data-popup="offerPopup">
+    <div class="offer-popup__body">
+      <button class="button-close offer-popup__close" type="button"></button>
+      <form class="contact-form__form">
+        <h2 class="title contact-form__title">Получите оптовое предложение</h2>
+        <p class="contact-form__text">Контактные данные</p>
+        <div class="contact-form__field">
+          <input class="contact-form__input" type="text" placeholder="Имя*" name="userName">
+        </div>
+        <div class="contact-form__field">
+          <input class="contact-form__input" type="tel" placeholder="Телефон*" name="userPhone">
+        </div>
+        <div class="contact-form__field">
+          <input class="contact-form__input" type="email" placeholder="E-mail" name="userEmail">
+        </div>
+        <div class="contact-form__box">
+          <button class="button contact-form__button" type="submit">
+            Получить
+          </button>
+          <p class="contact-form__text-info">
+            Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Политикой
+            конфиденциальности.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
   <?php wp_footer();?>
 
 </body>
