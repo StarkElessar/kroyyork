@@ -31,8 +31,8 @@
           <div class="footer__social">
             <?php
               if (get_field('whatsapp', 'option')){?><a href="<?php the_field('whatsapp', 'option')?>" class="footer__social-link footer__social-link_whatsapp"><img src="<?php echo get_template_directory_uri() ?>/images/whatsapp.png" alt="Whatsapp"></a><?php }       
-              if (get_field('facebook', 'option')){ ?> <a href="<?php the_field('facebook', 'option')?>" class="footer__social-link footer__social-link_facebook"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/facebook.svg" alt="Facebook"></a><?php  } ?>
-
+              if (get_field('facebook', 'option')){ ?> <a href="<?php the_field('facebook', 'option')?>" class="footer__social-link footer__social-link_facebook"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/facebook.svg" alt="Facebook"></a><?php  } 
+              if (get_field('facebook', 'option')){ ?> <a href="<?php the_field('vk', 'option')?>" class="footer__social-link footer__social-link_vk"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/vk.svg" alt="VK"></a><?php  } ?>
 
           </div>
         </div>
