@@ -1,0 +1,85 @@
+.offer-popup {
+  background-color: rgba(#111, 5%);
+  &._is-open {
+    opacity: 1;
+    visibility: visible;
+    .offer-popup__body {
+      transform: translateY(0);
+    }
+  }
+  // .offer-popup__body
+  &__body {
+    position: relative;
+    margin: 0 auto;
+    max-width: rem(666);
+    background-color: #fff;
+    padding: rem(70);
+    transform: translateY(rem(-20));
+    transition: transform 300ms ease-in-out 0ms;
+    box-shadow: $lightBoxShadow;
+    @include media(768) {
+      padding: rem(40) rem(15);
+    }
+    @include media(375) {
+      padding: rem(30) 0;
+    }
+  }
+  // .offer-popup__close
+  &__close {
+  }
+}
+.button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: rem(30);
+  height: rem(30);
+  background-color: $purplishColor;
+  transition: $standartTrans;
+  &:hover {
+    background-color: $hoverColor;
+  }
+  &:focus {
+    background-color: $focusColor;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    content: '';
+    width: rem(20);
+    height: rem(2);
+    background-color: #fff;
+  }
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+.contact-form {
+  // .contact-form__form
+  &__form {
+  }
+  // .contact-form__title
+  &__title {
+  }
+  // .contact-form__text
+  &__text {
+  }
+  // .contact-form__field
+  &__field {
+  }
+  // .contact-form__input
+  &__input {
+  }
+  // .contact-form__box
+  &__box {
+  }
+  // .contact-form__button
+  &__button {
+  }
+  // .contact-form__text-info
+  &__text-info {
+  }
+}
