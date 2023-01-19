@@ -72,6 +72,8 @@ headerFixed()
 /* Раскомментировать для использования */
 // togglePopupWindows()
 // ====================================================================================================================================================
+togglePopupWindows()
+
 let firstMobileSlider
 const mobileSliderInit = () => {
   if (window.innerWidth <= 540 && firstSlider.dataset.mobile === 'false') {
