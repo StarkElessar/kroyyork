@@ -38,8 +38,6 @@ function byte_setup() {
 }
 add_action( 'after_setup_theme', 'byte_setup' );
 
-
-
 add_action( 'wp_enqueue_scripts', 'add_my_scripts' );    // Фронт
 function add_my_scripts(){
     wp_enqueue_style( 'main', get_stylesheet_uri() );
@@ -59,7 +57,7 @@ if( function_exists('acf_add_options_page') ) {
         'page_title'    => 'Базовые настройки',
         'menu_title'    => 'Basic Setup',
     ));
-    
+
 }
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );
@@ -104,3 +102,145 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 
 	return $data;
 }
+
+
+
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Отзывы.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Отзывы", "custom-post-type-ui" ),
+		"singular_name" => esc_html__( "Отзыв", "custom-post-type-ui" ),
+		"menu_name" => esc_html__( "Мои Отзывы", "custom-post-type-ui" ),
+		"all_items" => esc_html__( "Все Отзывы", "custom-post-type-ui" ),
+		"add_new" => esc_html__( "Добавить новый", "custom-post-type-ui" ),
+		"add_new_item" => esc_html__( "Добавить новый Отзыв", "custom-post-type-ui" ),
+		"edit_item" => esc_html__( "Редактировать Отзыв", "custom-post-type-ui" ),
+		"new_item" => esc_html__( "Новый Отзыв", "custom-post-type-ui" ),
+		"view_item" => esc_html__( "Смотреть Отзыв", "custom-post-type-ui" ),
+		"view_items" => esc_html__( "Смотреть Отзывы", "custom-post-type-ui" ),
+		"search_items" => esc_html__( "Искать Отзывы", "custom-post-type-ui" ),
+		"not_found" => esc_html__( "не найдено", "custom-post-type-ui" ),
+		"not_found_in_trash" => esc_html__( "не найдено в корзине", "custom-post-type-ui" ),
+		"parent" => esc_html__( "родительский Отзыв:", "custom-post-type-ui" ),
+		"featured_image" => esc_html__( "Изображение Отзыв", "custom-post-type-ui" ),
+		"set_featured_image" => esc_html__( "Установить главное изображение Отзыв", "custom-post-type-ui" ),
+		"remove_featured_image" => esc_html__( "Удалить главное изображение Отзыв", "custom-post-type-ui" ),
+		"use_featured_image" => esc_html__( "Использовать главное изображение Отзыв", "custom-post-type-ui" ),
+		"archives" => esc_html__( "Отзыв архив", "custom-post-type-ui" ),
+		"insert_into_item" => esc_html__( "Insert into Отзыв", "custom-post-type-ui" ),
+		"uploaded_to_this_item" => esc_html__( "Загрузить Отзыв", "custom-post-type-ui" ),
+		"filter_items_list" => esc_html__( "Filter Отзывы list", "custom-post-type-ui" ),
+		"items_list_navigation" => esc_html__( "Отзывы list navigation", "custom-post-type-ui" ),
+		"items_list" => esc_html__( "Отзывы list", "custom-post-type-ui" ),
+		"attributes" => esc_html__( "Отзывы attributes", "custom-post-type-ui" ),
+		"name_admin_bar" => esc_html__( "Отзыв", "custom-post-type-ui" ),
+		"item_published" => esc_html__( "Отзыв опубликован", "custom-post-type-ui" ),
+		"item_published_privately" => esc_html__( "Отзыв published privately.", "custom-post-type-ui" ),
+		"item_reverted_to_draft" => esc_html__( "Отзыв reverted to draft.", "custom-post-type-ui" ),
+		"item_scheduled" => esc_html__( "Отзыв scheduled", "custom-post-type-ui" ),
+		"item_updated" => esc_html__( "Отзыв обновлен.", "custom-post-type-ui" ),
+		"parent_item_colon" => esc_html__( "родительский Отзыв:", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Отзывы", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "testimonial", "with_front" => true ],
+		"query_var" => true,
+		"menu_icon" => "dashicons-testimonial",
+		"supports" => [ "title", "custom-fields" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "testimonial", $args );
+
+	/**
+	 * Post Type: Коллекции.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Коллекции", "custom-post-type-ui" ),
+		"singular_name" => esc_html__( "Коллекция", "custom-post-type-ui" ),
+		"menu_name" => esc_html__( "Мои Коллекции", "custom-post-type-ui" ),
+		"all_items" => esc_html__( "Все Коллекции", "custom-post-type-ui" ),
+		"add_new" => esc_html__( "Добавить новую", "custom-post-type-ui" ),
+		"add_new_item" => esc_html__( "Добавить новую Коллекцию", "custom-post-type-ui" ),
+		"edit_item" => esc_html__( "Редактировать Коллекцию", "custom-post-type-ui" ),
+		"new_item" => esc_html__( "Новая Коллекция", "custom-post-type-ui" ),
+		"view_item" => esc_html__( "Смотреть Коллекция", "custom-post-type-ui" ),
+		"view_items" => esc_html__( "Смотреть Коллекции", "custom-post-type-ui" ),
+		"search_items" => esc_html__( "Искать Коллекции", "custom-post-type-ui" ),
+		"not_found" => esc_html__( "No Коллекции found", "custom-post-type-ui" ),
+		"not_found_in_trash" => esc_html__( "No Коллекции found in trash", "custom-post-type-ui" ),
+		"parent" => esc_html__( "Parent Коллекция:", "custom-post-type-ui" ),
+		"featured_image" => esc_html__( "Featured image for this Коллекция", "custom-post-type-ui" ),
+		"set_featured_image" => esc_html__( "Set featured image for this Коллекция", "custom-post-type-ui" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this Коллекция", "custom-post-type-ui" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this Коллекция", "custom-post-type-ui" ),
+		"archives" => esc_html__( "Коллекция archives", "custom-post-type-ui" ),
+		"insert_into_item" => esc_html__( "Insert into Коллекция", "custom-post-type-ui" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this Коллекция", "custom-post-type-ui" ),
+		"filter_items_list" => esc_html__( "Filter Коллекции list", "custom-post-type-ui" ),
+		"items_list_navigation" => esc_html__( "Коллекции list navigation", "custom-post-type-ui" ),
+		"items_list" => esc_html__( "Коллекции list", "custom-post-type-ui" ),
+		"attributes" => esc_html__( "Коллекции attributes", "custom-post-type-ui" ),
+		"name_admin_bar" => esc_html__( "Коллекция", "custom-post-type-ui" ),
+		"item_published" => esc_html__( "Коллекция Опубликована", "custom-post-type-ui" ),
+		"item_published_privately" => esc_html__( "Коллекция published privately.", "custom-post-type-ui" ),
+		"item_reverted_to_draft" => esc_html__( "Коллекция reverted to draft.", "custom-post-type-ui" ),
+		"item_scheduled" => esc_html__( "Коллекция scheduled", "custom-post-type-ui" ),
+		"item_updated" => esc_html__( "Коллекция Обновлена", "custom-post-type-ui" ),
+		"parent_item_colon" => esc_html__( "Parent Коллекция:", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Коллекции", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "collections", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "collections", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
