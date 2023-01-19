@@ -4,6 +4,9 @@ body {
     touch-action: none;
   }
 }
+// Анимации
+@import "keyFrames";
+
 // Стили для полноэкранного блока
 // @import "fullscreen";
 
@@ -46,7 +49,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: $standartTrans; // Можно задать свою анимацию
-  z-index: 200; // Увеличить если нужно
+  z-index: 2000; // Увеличить если нужно
   padding: rem(60) rem(15); // Изменить по макету
   overflow-y: auto;
   @include media(768) {

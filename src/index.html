@@ -42,7 +42,9 @@
                 <span class="promo__item-text">размерный ряд от 40 — до 58</span>
               </li>
             </ul>
-            <button class="promo__button button" type="button">Получить оптовый прайс-лист</button>
+            <button class="promo__button button" type="button" data-type="offerPopup">
+              Получить оптовый прайс-лист
+            </button>
           </div>
           <div class="promo__image-ibg">
             <img src="@img/promo-bg.png" alt="Women">
@@ -169,7 +171,9 @@
             </div>
           </div>
           <h3 class="lama__subtitle">И, наконец, это просто красиво!</h3>
-          <button class="lama__button button" type="button">Получить каталог + прайс-лист</button>
+          <button class="lama__button button" type="button" data-type="offerPopup">
+            Получить каталог + прайс-лист
+          </button>
         </div>
       </section>
       <section class="page__gallery gallery">
@@ -199,6 +203,90 @@
               </div>
             </div>
             <div class="gallery__progress-bar swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="page__offer about">
+        <div class="about__container">
+          <div class="about__image about__image_left image-decor-ibg">
+            <img src="@img/about/03.png" alt="Women">
+          </div>
+          <div class="about__content about-content">
+            <h2 class="about-content__title title">Нашим оптовым партнерам мы предлагаем</h2>
+            <div class="about-content__offer-grid">
+              <div class="about-content__offer-item">
+                <span class="about-content__offer-icon">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="about-content__offer-text">
+                  <span>2 коллекции</span> в год
+                </span>
+              </div>
+              <div class="about-content__offer-item">
+                <span class="about-content__offer-icon">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="about-content__offer-text">
+                  маркетинговая <span>поддержка</span>
+                </span>
+              </div>
+              <div class="about-content__offer-item">
+                <span class="about-content__offer-icon">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="about-content__offer-text">
+                  <span>полный доступ</span> к фото и видео контенту
+                </span>
+              </div>
+              <div class="about-content__offer-item">
+                <span class="about-content__offer-icon">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="about-content__offer-text">
+                  размещение информации о вашем магазине <span>на нашем сайте</span>
+                </span>
+              </div>
+              <div class="about-content__offer-item">
+                <span class="about-content__offer-icon">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="about-content__offer-text">
+                  отправку и доставку заказов <span>строго по отбору и в оговоренные сроки</span>
+                </span>
+              </div>
+              <div class="about-content__offer-item">
+                <span class="about-content__offer-icon">
+                  <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="about-content__offer-text">
+                  <span>единая ценовая политика</span> между брендом и партнерами
+                </span>
+              </div>
+            </div>
+            <button class="about__button button" type="button" data-type="offerPopup">
+              Стать нашим партнером
+            </button>
+          </div>
+          <div class="about__image about__image_right image-decor-ibg">
+            <img src="@img/about/04.png" alt="Women">
           </div>
         </div>
       </section>
@@ -285,7 +373,9 @@
                 <input class="contact-form__input" type="email" placeholder="E-mail" name="userEmail">
               </div>
               <div class="contact-form__box">
-                <button class="contact-form__button button" type="submit">Получить</button>
+                <button class="contact-form__button button" type="submit">
+                  Получить
+                </button>
                 <p class="contact-form__text-info">
                   Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Политикой
                   конфиденциальности.
@@ -298,6 +388,7 @@
     </main>
     @@include('html/footer.html', {})
   </div>
+  @@include('html/modals/offerFormPopup.html', {})
   @@include('html/script.html', {})
 </body>
 
