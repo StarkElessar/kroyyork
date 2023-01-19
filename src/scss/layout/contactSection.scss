@@ -26,11 +26,8 @@
     height: 100%;
     @include media(920) {
       position: relative;
-      padding-bottom: prc(395, 768);
+      padding-bottom: prc(500, 768);
       width: 100%;
-      img {
-        object-position: top;
-      }
     }
   }
   // .contact-form__content
