@@ -2,6 +2,17 @@
 .header {
   width: 100%;
   background-color: #fff;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(#fff, 80%);
+    animation: showHeader forwards 1000ms ease-in-out;
+    .header__container {
+      height: rem($headerHeight - 30);
+    }
+  }
   // .header__container
   &__container {
     height: rem($headerHeight);
