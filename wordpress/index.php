@@ -191,70 +191,50 @@
           </div>
         </div>
       </section>
-      <section class="page__testi testi">
-        <div class="testi__container">
-          <h2 class="title testi__title">Отзывы партнеров</h2>
-          <div class="swiper slider-auto testi__slider">
-            <div class="swiper-wrapper testi__wrapper">
-              <div class="swiper-slide testi__slide">
-                <div class="testi__slide-title">ИП Пивень Ольга Игоревна</div>
-                <p class="testi__slide-text">
-                  Красноярский край, г. Зеленогорск магазин КАШЕМИР
-                </p>
-                <span class="testi__slide-devider"></span>
-                <p class="testi__slide-text testi__slide-text_scroll">
-                  Являюсь партнером этой уникальной компании с 2013 года и ценю её сотрудников за лояльность и
-                  готовность всегда идти на встречу ;)) Желаю компании только процветания, чтобы можно было и дальше
-                  успешно сотрудничать.
-                </p>
-              </div>
-              <div class="swiper-slide testi__slide">
-                <div class="testi__slide-title">ИП Красноглазова Татьяна Дмитриевна</div>
-                <p class="testi__slide-text">
-                  г. Тула, магазин "Фасон" ТРЦ " Рио", ТК "Парадиз"
-                </p>
-                <span class="testi__slide-devider"></span>
-                <p class="testi__slide-text testi__slide-text_scroll">
-                  Являюсь партнером этой уникальной компании с 2013 года и ценю её сотрудников за лояльность и
-                  готовность всегда идти на встречу ;)) Желаю компании только процветания, чтобы можно было и дальше
-                  успешно сотрудничать.
-                </p>
-              </div>
-              <div class="swiper-slide testi__slide">
-                <div class="testi__slide-title">ИП Салихова Файруза Фаварисовна</div>
-                <p class="testi__slide-text">
-                  г.Нефтекамск, магазин GLANC
-                </p>
-                <span class="testi__slide-devider"></span>
-                <p class="testi__slide-text testi__slide-text_scroll">
-                  С Кройорк работаем 7 лет. Достойные коллекции и надёжность – вот главные качества компании. А
-                  сотрудники лояльные, внимательные и добропорядочные. С самого начала работаем с Екатериной и очень
-                  рады этому.
-                </p>
-              </div>
-              <div class="swiper-slide testi__slide">
-                <div class="testi__slide-title">Наталия Оглезнева, собственник</div>
-                <p class="testi__slide-text">
-                  «Специализированный магазин Пальто», г. Хабаровск
-                </p>
-                <span class="testi__slide-devider"></span>
-                <p class="testi__slide-text testi__slide-text_scroll">
-                  Kroyyork является надежным партнером сети Специализированных магазинов Пальто более 12 лет. При
-                  открытии нового розничного магазина в г. Хабаровск вопрос работать ли с брендом Kroyyork даже не стоял
-                  – конечно, работать! Kroyyork из года в год обеспечивает безупречное качество производимых изделий:
-                  отличный состав тканей, идеальная посадка, регулярное обновление коллекции с учетом последних трендов.
-                  Продукция бренда занимает основную часть ассортимента сети Специализированных магазинов Пальто.
-                  Kroyyork неизменно подтверждает свое лидерство на рынке, как ведущий российский производитель пальто
-                  премиального сегмента. Стабильность, ответственность, внимание к деталям, индивидуальный подход к
-                  клиенту – это отличительные черты команды Kroyyork. Работать с Kroyyork приятно и легко. От всего
-                  коллектива мы желаем Kroyyork процветания, развития, стабильного роста!
-                </p>
-              </div>
+      <!-- Отзывы -->
+      <?php		
+        global $post;
+
+        $query = new WP_Query( [
+          'posts_per_page' => -1,
+          'post_type'        => 'testimonial',
+          'order'            => 'ASC',
+          'orderby'          => 'date'
+        ] );
+
+        if ( $query->have_posts() ) {
+        ?>
+        <section class="page__testi testi">
+          <div class="testi__container">
+            <h2 class="title testi__title">Отзывы партнеров</h2>
+            <div class="swiper slider-auto testi__slider">
+              <div class="swiper-wrapper testi__wrapper">
+              <?php
+              while ( $query->have_posts() ) {
+                $query->the_post();
+                ?>
+                <div class="swiper-slide testi__slide">
+                  <div class="testi__slide-title"><?php the_title();?></div>
+                  <p class="testi__slide-text">
+                    <?php the_field('city_shop')?>
+                  </p>
+                  <span class="testi__slide-devider"></span>
+                  <p class="testi__slide-text testi__slide-text_scroll">
+                    <?php the_field('text')?>
+                  </p>
+                </div>
+                <?php 
+              }
+              ?>
+                </div>
+              <div class="swiper-pagination testi__progress-bar"></div>
             </div>
-            <div class="swiper-pagination testi__progress-bar"></div>
           </div>
-        </div>
-      </section>
+        </section>
+      <?php }  wp_reset_postdata(); // Сбрасываем $post ?>
+
+
+      <!-- форма -->
       <section class="contact-form page__contact-form">
         <div class="contact-form__container">
           <div class="contact-form__image-ibg">
