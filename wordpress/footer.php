@@ -1,12 +1,9 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__content">
-          <?php
-          $logo_id = get_theme_mod( 'custom_logo' );
-          $logo_image = wp_get_attachment_image_src( $logo_id, 'full' );
-          if ( ! empty( $logo_image ) ) :?>
-            <a href="<?php echo esc_url( home_url( ) ); ?>" class="footer__logo"><img src="<?php echo esc_url( $logo_image[0] ); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
-          <?php endif; ?>
+          <?php $footerLogo = get_field('footer__logo', 'option')?>
+           <a href="<?php echo esc_url( home_url( ) ); ?>" class="footer__logo"><?php echo wp_get_attachment_image( $footerLogo, 'full' ); ?></a>
+
           <div class="footer__column footer__column_address">
             <h3 class="footer__title">Адрес нашего шоу-рума / оптового отдела</h3>
             <?php    
@@ -30,10 +27,10 @@
           </div>
           <div class="footer__social">
             <?php
-              if (get_field('whatsapp', 'option')){?><a href="<?php the_field('whatsapp', 'option')?>" class="footer__social-link footer__social-link_whatsapp"><img src="<?php echo get_template_directory_uri() ?>/images/whatsapp.png" alt="Whatsapp"></a><?php }       
-              if (get_field('facebook', 'option')){ ?> <a href="<?php the_field('facebook', 'option')?>" class="footer__social-link footer__social-link_facebook"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/facebook.svg" alt="Facebook"></a><?php  } 
-              if (get_field('vk', 'option')){ ?> <a href="<?php the_field('vk', 'option')?>" class="footer__social-link footer__social-link_vk"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/vk.svg" alt="VK"></a><?php  } 
-              if (get_field('telegram', 'option')){ ?> <a href="<?php the_field('telegram', 'option')?>" class="footer__social-link footer__social-link_telegram"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/telegram.svg" alt="telegram"></a><?php  } 
+              if (get_field('whatsapp', 'option')){?><a href="<?php the_field('whatsapp', 'option')?>" class="footer__social-link footer__social-link_whatsapp" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/whatsapp.png" alt="Whatsapp"></a><?php }       
+              if (get_field('facebook', 'option')){ ?> <a href="<?php the_field('facebook', 'option')?>" class="footer__social-link footer__social-link_facebook" target="_blank"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/facebook.svg" alt="Facebook"></a><?php  } 
+              if (get_field('vk', 'option')){ ?> <a href="<?php the_field('vk', 'option')?>" class="footer__social-link footer__social-link_vk" target="_blank"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/vk.svg" alt="VK"></a><?php  } 
+              if (get_field('telegram', 'option')){ ?> <a href="<?php the_field('telegram', 'option')?>" class="footer__social-link footer__social-link_telegram" target="_blank"> <img src="<?php echo get_template_directory_uri() ?>/images/icons/telegram.svg" alt="telegram"></a><?php  } 
               ?>
 
           </div>
@@ -49,28 +46,7 @@
   <div class="_overlay-bg offer-popup" data-popup="offerPopup">
     <div class="offer-popup__body">
       <button class="button-close offer-popup__close" type="button"></button>
-      <form class="contact-form__form">
-        <h2 class="title contact-form__title">Получите оптовое предложение</h2>
-        <p class="contact-form__text">Контактные данные</p>
-        <div class="contact-form__field">
-          <input class="contact-form__input" type="text" placeholder="Имя*" name="userName">
-        </div>
-        <div class="contact-form__field">
-          <input class="contact-form__input" type="tel" placeholder="Телефон*" name="userPhone">
-        </div>
-        <div class="contact-form__field">
-          <input class="contact-form__input" type="email" placeholder="E-mail" name="userEmail">
-        </div>
-        <div class="contact-form__box">
-          <button class="button contact-form__button" type="submit">
-            Получить
-          </button>
-          <p class="contact-form__text-info">
-            Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Политикой
-            конфиденциальности.
-          </p>
-        </div>
-      </form>
+      <?php echo do_shortcode('[contact-form-7 id="20" title="Форма на сайте"]');?>
     </div>
   </div>
   <?php wp_footer();?>
