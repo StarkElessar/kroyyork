@@ -46,7 +46,7 @@
     width: calc(100% - 15px);
     height: rem(400);
   }
-  @include media(768) {
+  @include media(490) {
     height: rem(190);
   }
 }
