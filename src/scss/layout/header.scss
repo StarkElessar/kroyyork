@@ -2,6 +2,7 @@
 .header {
   width: 100%;
   background-color: #fff;
+
   &.sticky {
     position: fixed;
     top: 0;
@@ -9,49 +10,57 @@
     z-index: 100;
     background-color: rgba(#fff, 80%);
     animation: showHeader forwards 1000ms ease-in-out;
+
     .header__container {
       height: rem($headerHeight - 30);
     }
   }
+
   // .header__container
   &__container {
     height: rem($headerHeight);
     display: flex;
     align-items: center;
     column-gap: rem(20);
+    max-width: 1500px;
+
     @include media(510) {
       height: rem($headerHeight - 15);
     }
   }
+
   // .header__logo
   &__logo {
     width: rem(104);
     height: rem(50);
     margin-right: auto;
+
     @include media(510) {
       width: rem(83);
       height: rem(42);
     }
+
     img {
       max-width: 100%;
     }
   }
+
   // .header__link
   &__link {
     display: flex;
     align-items: center;
     column-gap: rem(10);
-    // .header__link_mail
-    &_mail {
-    }
-    // .header__link_phone
-    &_phone {
-    }
-    // .header__link_whatsapp
-    &_whatsapp {
 
-    }
+    // .header__link_mail
+    &_mail {}
+
+    // .header__link_phone
+    &_phone {}
+
+    // .header__link_whatsapp
+    &_whatsapp {}
   }
+
   // .header__link-icon
   &__link-icon {
     display: flex;
@@ -59,19 +68,23 @@
     justify-content: center;
     width: rem(36);
     height: rem(36);
+
     @include media(768) {
       width: rem(30);
       height: rem(30);
     }
+
     svg {
       max-width: 100%;
       max-height: 100%;
     }
   }
+
   // .header__link-text
   &__link-text {
     font-size: rem(21);
     line-height: prc(31, 21);
+
     @include media(1024) {
       display: none;
     }

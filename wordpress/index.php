@@ -259,7 +259,7 @@
                <?php echo wp_get_attachment_image( $image, 'full' ); ?>
             </div>
             <div class="contact-form__content">
-              <?php echo do_shortcode('[contact-form-7 id="20" title="Форма на сайте"]');?>
+              <?php echo do_shortcode('[contact-form-7 id="20" title="Форма на сайте" html_class="contact-form__form"]');?>
             </div>
           </div>
         </section>

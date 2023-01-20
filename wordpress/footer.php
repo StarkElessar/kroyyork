@@ -46,7 +46,7 @@
   <div class="_overlay-bg offer-popup" data-popup="offerPopup">
     <div class="offer-popup__body">
       <button class="button-close offer-popup__close" type="button"></button>
-      <?php echo do_shortcode('[contact-form-7 id="20" title="Форма на сайте"]');?>
+      <?php echo do_shortcode('[contact-form-7 id="20" title="Форма на сайте" html_class="contact-form__form"]');?>
     </div>
   </div>
   <?php wp_footer();?>

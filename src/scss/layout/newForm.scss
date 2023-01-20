@@ -2,8 +2,30 @@
   display: flex;
   flex-direction: column;
   row-gap: 1.75rem;
+
+  @include media(920) {
+    padding: 0 0.9375rem;
+  }
 }
 
 .wpcf7-spinner {
   display: none;
+}
+
+.contact-form__field {
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    border-radius: 0;
+  }
+
+}
+
+.contact-form__box {
+  @include media(920) {
+    p {
+      width: 100%;
+    }
+  }
 }
