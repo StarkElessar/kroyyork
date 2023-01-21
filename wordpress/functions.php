@@ -57,7 +57,10 @@ if( function_exists('acf_add_options_page') ) {
         'page_title'    => 'Базовые настройки',
         'menu_title'    => 'Basic Setup',
     ));
-
+		acf_add_options_sub_page(array(
+			'page_title'    => 'Скрипты в header и footer',
+			'menu_title'    => 'Header&Footer custom code',
+	));
 }
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );

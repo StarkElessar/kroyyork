@@ -16,10 +16,34 @@
 
   input[type="text"],
   input[type="tel"],
-  input[type="email"] {
-    border-radius: 0;
+  input[type="email"],
+  input[type="submit"] {
+    border-radius: 0 !important;
   }
+}
 
+input[type="submit"] {
+  border-radius: 0 !important;
+  background-color: #8a728e;
+
+  @include media(990) {
+    padding: 1.5rem 0;
+    background-color: #8a728e;
+    border-radius: 0 !important;
+    -webkit-appearance: button;
+  }
+}
+
+input[type=submit] {
+  border-radius: 0 !important;
+  background-color: #8a728e;
+
+  @include media(990) {
+    padding: 1.5rem 0;
+    background-color: #8a728e;
+    border-radius: 0 !important;
+    -webkit-appearance: button;
+  }
 }
 
 .contact-form__box {

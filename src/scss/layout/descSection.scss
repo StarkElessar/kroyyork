@@ -4,14 +4,16 @@
   @include adaptiveClamp('padding-bottom', 150, 112, 1920, 768, 1);
   @include adaptiveClamp('margin-bottom', 564, 280, 1920, 768, 1);
   background-color: $purplishColor;
+
   @include media(540) {
     margin-bottom: 0;
     padding-top: rem(30);
     padding-bottom: rem(43);
   }
+
   // .desc__container
-  &__container {
-  }
+  &__container {}
+
   // .desc__text
   &__text {
     max-width: rem(860);
@@ -20,14 +22,22 @@
     text-align: center;
     font-family: PlayfairDisplay;
     @include adaptiveClamp('font-size', 32, 28, 1920, 768, 1);
-    line-height: prc(46,32);
+    line-height: prc(46, 32);
     font-weight: 400;
+
+    @media(min-width:1023px) and (max-width:1440px) {
+      max-width: 650px;
+      font-size: 26px;
+      line-height: 200%;
+    }
+
     @include media(540) {
       font-size: rem(16);
       line-height: prc(26, 16);
       margin-bottom: rem(30);
     }
   }
+
   // .desc__media
   &__media {}
 }
@@ -37,38 +47,50 @@
   left: 50%;
   @include adaptiveClamp('top', 298, 220, 1920, 768, 1);
   transform: translateX(-50%);
+
   @include media(726) {
     @include adaptiveClamp('top', 240, 300, 726, 540, 1);
   }
+
   @include media(540) {
     position: static;
     transform: translate(0);
   }
+
   // .slider-desc__wrapper
   &__wrapper {
     display: flex;
     align-items: center;
     column-gap: rem(20);
+
+
     @include media(726) {
       column-gap: rem(12);
     }
+
     @include media(540) {
       column-gap: rem(0);
       padding-bottom: rem(22);
     }
   }
+
   // .slider-desc__image-ibg
   &__image-ibg {
     @include adaptiveClamp('width', 400, 200, 1920, 768, 1);
     @include adaptiveClamp('height', 460, 272, 1920, 768, 1);
+
     @include media(540) {
       width: 100%;
-      height: rem(368);
+      height: rem(480);
     }
+
     img {
-      object-position: top;
+      position: relative;
+      height: 100%;
+      object-position: center;
     }
   }
+
   // .slider-desc__progress-bar
   &__progress-bar {
     &.swiper-pagination {
@@ -76,10 +98,13 @@
       bottom: 0;
       background-color: transparent;
       height: rem(3);
+
       .swiper-pagination-progressbar-fill {
         background-color: #fff;
       }
+
     }
+
     &::before {
       content: '';
       position: absolute;

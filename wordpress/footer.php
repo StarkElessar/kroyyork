@@ -49,8 +49,13 @@
       <?php echo do_shortcode('[contact-form-7 id="20" title="Форма на сайте" html_class="contact-form__form"]');?>
     </div>
   </div>
-  <?php wp_footer();?>
 
+  <?php wp_footer();?>
+  <?php if( have_rows('footer__repeater', 'option') ): ?>
+    <?php while( have_rows('footer__repeater', 'option') ): the_row(); ?>
+      <?php the_sub_field('footer__code')?>
+    <?php endwhile; ?>
+  <?php endif; ?>
 </body>
 
 </html>

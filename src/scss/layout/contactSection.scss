@@ -30,6 +30,10 @@
     width: prc(800, 1920);
     height: 100%;
 
+    @media(min-width:1023px) and (max-width:1440px) {
+      width: 55%;
+    }
+
     @include media(920) {
       position: relative;
       padding-bottom: prc(500, 768);
@@ -143,8 +147,8 @@
       flex: 0 0 50%;
     }
 
-    @include media(425) {
-      font-size: rem(12);
+    @include media(490) {
+      font-size: rem(14);
       line-height: prc(20, 12);
     }
   }

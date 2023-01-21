@@ -1,40 +1,51 @@
 .gallery {
   padding: rem(120) 0;
+
   @include media(768) {
     padding: rem(60) 0;
   }
+
   @include media(460) {
     padding: rem(20) 0;
   }
+
   // .gallery__container
-  &__container {
-  }
+  &__container {}
+
   // .gallery__slider
   &__slider {
     overflow: visible;
   }
+
   // .gallery__wrapper
   &__wrapper {
     padding-bottom: rem(40);
+
     @include media(460) {
       padding-bottom: rem(20);
     }
   }
+
   // .gallery__slide-image-ibg
   &__slide-image-ibg {
     width: rem(400);
     height: rem(536);
+
     @include media(768) {
       width: rem(362);
       height: rem(484);
     }
+
     @include media(460) {
       width: 100%;
+      height: rem(520);
     }
+
     @include media(375) {
       height: rem(430);
     }
   }
+
   // .gallery__progress-bar
   &__progress-bar {
     &.swiper-pagination {
@@ -42,10 +53,12 @@
       bottom: 0;
       background-color: transparent;
       height: rem(3);
+
       .swiper-pagination-progressbar-fill {
         background-color: $blackColor;
       }
     }
+
     &::before {
       content: "";
       position: absolute;
