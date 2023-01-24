@@ -22,7 +22,7 @@
           <div class="footer__column footer__column_contact">
             <h3 class="footer__title">Телефон и e-mail отдела оптовых закупок</h3>
             <?php
-            if (get_field('phone', 'option')) { ?><a href="tel:<?php the_field('phone', 'option')?>" class="footer__link"><?php the_field('phone', 'option')?></a><?php }       
+            if (get_field('phone', 'option')) { ?><a href="tel:<?php the_field('phone', 'option')?>" class="footer__link callto" id="callto"><?php the_field('phone', 'option')?></a><?php }       
             if (get_field('email', 'option')) { ?><a href="mailto:<?php the_field('email', 'option')?>" class="footer__link"><?php the_field('email', 'option')?></a><?php }?>
           </div>
           <div class="footer__social">

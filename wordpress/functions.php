@@ -247,3 +247,19 @@ function cptui_register_my_cpts() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
+
+
+add_action( 'phpmailer_init', 'beget_smtp_enable' );
+
+function beget_smtp_enable( PHPMailer $phpmailer ) {
+	$phpmailer->isSMTP();
+	$phpmailer->SMTPAuth   = true;
+	$phpmailer->Host       = 'smtp.beget.com';
+	$phpmailer->Port       = '2525';
+	$phpmailer->Username   = 'mail@kroyyork.ru';
+	$phpmailer->Password   = '%1yuGJ3J';
+	$phpmailer->SMTPSecure = 'ssl';
+	$phpmailer->From       = 'mail@kroyyork.ru';
+	$phpmailer->FromName   = get_bloginfo( 'name' );
+	$phpmailer->Sender     = 'mail@kroyyork.ru';
+}
