@@ -16,7 +16,7 @@
                     <li class="promo__item">
                       <span class="icon-check promo__item-icon">
                         <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                       </span>
                       <span class="promo__item-text"><?php the_sub_field('list_item')?></span>
@@ -183,7 +183,7 @@
                   <div class="about-content__offer-item">
                     <span class="about-content__offer-icon">
                       <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#8A728E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </span>
                     <span class="about-content__offer-text">

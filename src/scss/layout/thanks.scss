@@ -91,7 +91,7 @@
   }
 
   &__title {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 62px;
     line-height: 150%;
     padding: 20px 0;
@@ -102,7 +102,7 @@
     }
 
     strong {
-      font-weight: 700;
+      font-weight: 400;
     }
 
     @include media(1100) {

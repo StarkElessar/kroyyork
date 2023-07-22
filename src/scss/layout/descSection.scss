@@ -3,7 +3,7 @@
   @include adaptiveClamp('padding-top', 80, 60, 1920, 768, 1);
   @include adaptiveClamp('padding-bottom', 150, 112, 1920, 768, 1);
   @include adaptiveClamp('margin-bottom', 564, 280, 1920, 768, 1);
-  background-color: $purplishColor;
+  background-color: #F3F3F3;
 
   @include media(540) {
     margin-bottom: 0;
@@ -18,9 +18,9 @@
   &__text {
     max-width: rem(860);
     margin: 0 auto;
-    color: #fff;
+    color: #141414;
     text-align: center;
-    font-family: PlayfairDisplay;
+    font-family: Rawline;
     @include adaptiveClamp('font-size', 32, 28, 1920, 768, 1);
     line-height: prc(46, 32);
     font-weight: 400;

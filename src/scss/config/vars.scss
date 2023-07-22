@@ -4,7 +4,7 @@ $maxWidthContainer: 1390; // ширина контейнера с учетом p
 $containerWidth: 1360; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: "SFUIDisplay"; // !указать здесь основное семейство шрифта
+$mainFont: "Rawline"; // !указать здесь основное семейство шрифта
 $mainWeight: 300; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
@@ -14,13 +14,13 @@ $mainRadius: rem(10);
 
 $whiteColor: #fff;
 $blackColor: #101010;
-$purplishColor: #8a728e;
+$purplishColor: #141414;
 $grayColor: #e4e7e6;
 $lightGrayColor: #dfdfdf;
 $redColor: #ee1212;
 
-$hoverColor: #b298b7;
-$focusColor: #7c6580;
+$hoverColor: #555555;
+$focusColor: #555555;
 
 $firstAccentColor: $purplishColor;
 $secondAccentColor: $redColor;

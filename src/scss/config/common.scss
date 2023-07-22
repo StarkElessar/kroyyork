@@ -1,9 +1,9 @@
 // Заголовки, общие БЄМ блоки и проче...
 .title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: rem(46);
   line-height: prc(56, 46);
-  font-family: PlayfairDisplay;
+  font-family: Rawline;
 
   @include media(1440) {
     font-size: 32px;
@@ -33,7 +33,7 @@
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.012em;
-  font-weight: 500;
+  font-weight: 400;
   background-color: $firstAccentColor;
   transition: $standartTrans;
 

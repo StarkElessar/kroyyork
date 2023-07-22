@@ -36,11 +36,12 @@ input[type="submit"] {
 
 input[type=submit] {
   border-radius: 0 !important;
-  background-color: #8a728e;
+  background-color: #141414;
+  ;
 
   @include media(990) {
     padding: 1.5rem 0;
-    background-color: #8a728e;
+    background-color: #141414;
     border-radius: 0 !important;
     -webkit-appearance: button;
   }

@@ -138,7 +138,7 @@
 
   // .lama__text
   &__text {
-    font-family: PlayfairDisplay;
+    font-family: Rawline;
     font-size: rem(21);
     line-height: prc(31, 21);
     text-align: center;
@@ -157,10 +157,10 @@
   // .lama__subtitle
   &__subtitle {
     margin-top: rem(70);
-    font-family: PlayfairDisplay;
+    font-family: Rawline;
     font-size: rem(32);
     line-height: prc(42, 32);
-    font-weight: 700;
+    font-weight: 400;
 
     @include media(768) {
       margin-top: rem(50);

@@ -66,11 +66,11 @@
   // .footer__title
   &__title {
     max-width: rem(300);
-    font-weight: 700;
+    font-weight: 400;
     font-size: rem(21);
     line-height: prc(31, 21);
     color: #fff;
-    font-family: PlayfairDisplay;
+    font-family: Rawline;
 
     @include media(425) {
       font-size: rem(16);

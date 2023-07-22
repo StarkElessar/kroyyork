@@ -1,34 +1,42 @@
 .testi {
   padding-top: rem(160);
   padding-bottom: rem(120);
+
   @include media(768) {
     padding: rem(60) 0;
   }
+
   @include media(490) {
     padding: rem(20) 0;
   }
+
   // .testi__container
-  &__container {
-  }
+  &__container {}
+
   // .testi__title
   &__title {
     margin-bottom: rem(-20);
+
     @include media(490) {
       margin-bottom: rem(-5);
 
     }
   }
+
   // .testi__slider
   &__slider {
     overflow: visible;
   }
+
   // .testi__wrapper
   &__wrapper {
     padding: rem(40) 0;
+
     @include media(490) {
       padding: rem(20) 0;
     }
   }
+
   // .testi__slide
   &__slide {
     padding: rem(60) rem(40);
@@ -38,67 +46,80 @@
     justify-content: center;
     row-gap: rem(20);
     box-shadow: $lightBoxShadow;
+
     @include media(768) {
       padding: rem(40) rem(24);
     }
+
     @include media(490) {
       row-gap: rem(10);
       padding: rem(30) rem(10);
     }
   }
+
   // .testi__slide-title
   &__slide-title {
-    font-family: PlayfairDisplay;
-    font-weight: 700;
+    font-family: Rawline;
+    font-weight: 400;
     font-size: rem(21);
     line-height: prc(31, 21);
     text-align: center;
+
     @include media(490) {
       font-size: rem(16);
       line-height: prc(26, 16);
     }
   }
+
   // .testi__slide-text
   &__slide-text {
     line-height: prc(26, 16);
     text-align: center;
+
     @include media(490) {
       font-size: rem(14);
       line-height: prc(26, 14);
     }
+
     // .testi__slide-text_scroll
     &_scroll {
       flex: 0 0 rem(130);
       padding: 0 rem(8);
       overflow-y: auto;
+
       &::-webkit-scrollbar {
         width: rem(3);
         background-color: #c1c1c1;
       }
+
       &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 rem(2) rgba(#000, 20%);
         border-radius: rem(0);
         background: #eee;
       }
+
       &::-webkit-scrollbar-thumb {
         border-radius: rem(4);
         border: 0 none #fff;
         background-color: lighten($blackColor, 10%);
         transition: all 280ms ease-in-out;
+
         &:hover {
           background-color: $blackColor;
         }
       }
     }
   }
+
   // .testi__slide-devider
   &__slide-devider {
     margin: 0 auto;
-    font-family: PlayfairDisplay;
+    font-family: Rawline;
     width: 74px;
     height: 2px;
     background-color: $blackColor;
   }
+
   // .testi__progress-bar
   &__progress-bar {
     &.swiper-pagination {
@@ -106,10 +127,12 @@
       bottom: 0;
       background-color: transparent;
       height: rem(3);
+
       .swiper-pagination-progressbar-fill {
         background-color: $blackColor;
       }
     }
+
     &::before {
       content: "";
       position: absolute;

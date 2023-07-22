@@ -176,8 +176,8 @@
 
   // .about-content__item-strong
   &__item-strong {
-    font-weight: 700;
-    font-family: PlayfairDisplay;
+    font-weight: 400;
+    font-family: Rawline;
     @include adaptiveClamp("font-size", 46, 28, 1920, 1024, 1);
     line-height: 1;
     padding-bottom: rem(12);
@@ -271,10 +271,10 @@
 
   // .about-content__offer-text
   &__offer-text {
-    font-family: PlayfairDisplay;
+    font-family: Rawline;
     font-weight: 400;
-    font-size: rem(28);
-    line-height: prc(38, 28);
+    font-size: rem(21);
+    line-height: prc(28, 21);
 
     @include media (1440) {
       font-size: rem(20);
@@ -282,12 +282,18 @@
 
     @include media(490) {
       text-align: center;
-      font-size: rem(16);
-      line-height: prc(24, 16);
+      font-size: rem(12);
+      line-height: prc(21, 12);
     }
 
     span {
-      font-weight: 700;
+      font-weight: 400;
+      font-size: rem(28);
+
+
+      @include media(490) {
+        font-size: rem(16);
+      }
     }
   }
 }
