@@ -1,57 +1,101 @@
 // =====================================================================================================================
+.wrapper {
+  padding-top: 100px;
+
+  // @include media(1440) {
+  //   padding-top: 70px;
+  // }
+  @include media(510) {
+    padding-top: 85px;
+  }
+}
+
 .header {
   width: 100%;
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .8);
+  z-index: 100;
+
+  .header__container {
+    transition: all 0.5s linear;
+  }
+
   &.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: rgba(#fff, 80%);
-    animation: showHeader forwards 1000ms ease-in-out;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: 100;
+    // background-color: rgba(#fff, 80%);
+    // animation: showHeader forwards 1000ms ease-in-out;
+
     .header__container {
       height: rem($headerHeight - 30);
     }
   }
+
   // .header__container
   &__container {
     height: rem($headerHeight);
     display: flex;
     align-items: center;
     column-gap: rem(20);
+    max-width: 1500px;
+
+    @include media(1440) {
+      max-width: 1340px;
+    }
+
     @include media(510) {
       height: rem($headerHeight - 15);
     }
   }
+
   // .header__logo
   &__logo {
     width: rem(104);
     height: rem(50);
     margin-right: auto;
+
+    @media(min-width:1023px) and (max-width:1440px) {
+      margin-left: 3vw;
+    }
+
     @include media(510) {
       width: rem(83);
       height: rem(42);
     }
+
     img {
       max-width: 100%;
     }
   }
+
   // .header__link
   &__link {
     display: flex;
     align-items: center;
     column-gap: rem(10);
+
     // .header__link_mail
-    &_mail {
-    }
+    &_mail {}
+
     // .header__link_phone
-    &_phone {
-    }
+    &_phone {}
+
     // .header__link_whatsapp
     &_whatsapp {
+      margin-right: -30px;
 
+      @include media(1380) {
+        margin-right: 0;
+      }
     }
   }
+
   // .header__link-icon
   &__link-icon {
     display: flex;
@@ -59,19 +103,28 @@
     justify-content: center;
     width: rem(36);
     height: rem(36);
+
     @include media(768) {
       width: rem(30);
       height: rem(30);
     }
+
     svg {
+      display: flex;
       max-width: 100%;
       max-height: 100%;
     }
   }
+
   // .header__link-text
   &__link-text {
     font-size: rem(21);
     line-height: prc(31, 21);
+
+    @include media(1440) {
+      font-size: rem(18);
+    }
+
     @include media(1024) {
       display: none;
     }

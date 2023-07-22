@@ -1,0 +1,56 @@
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+
+  @include media(920) {
+    padding: 0 0.9375rem;
+  }
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.contact-form__field {
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="submit"] {
+    border-radius: 0 !important;
+  }
+}
+
+input[type="submit"] {
+  border-radius: 0 !important;
+  background-color: #8a728e;
+
+  @include media(990) {
+    padding: 1.5rem 0;
+    background-color: #8a728e;
+    border-radius: 0 !important;
+    -webkit-appearance: button;
+  }
+}
+
+input[type=submit] {
+  border-radius: 0 !important;
+  background-color: #141414;
+  ;
+
+  @include media(990) {
+    padding: 1.5rem 0;
+    background-color: #141414;
+    border-radius: 0 !important;
+    -webkit-appearance: button;
+  }
+}
+
+.contact-form__box {
+  @include media(920) {
+    p {
+      width: 100%;
+    }
+  }
+}

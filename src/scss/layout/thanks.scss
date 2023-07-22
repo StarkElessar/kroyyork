@@ -1,0 +1,132 @@
+.page-id-144 {
+  background-color: #EFF0F2;
+}
+
+.thanks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include media(1440) {
+    padding-right: 0;
+  }
+
+  @include media(1100) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    padding-right: 50px;
+  }
+
+  @include media(600) {
+    padding-top: 0;
+  }
+
+  &__image {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: -1;
+
+    @include media(1440) {
+      position: relative;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+
+      @include media(600) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @include media(600) {
+      order: 1;
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    @include media(1100) {
+      margin-bottom: 50px;
+    }
+
+    @include media(600) {
+      order: 2;
+      padding-top: 50px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    line-height: 150%;
+    max-width: 700px;
+
+    @include media(1440) {
+      font-size: 24px;
+      max-width: 600px;
+    }
+
+    @include media(1100) {
+      font-size: 34px;
+    }
+
+    @include media(600) {
+      font-size: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 150%;
+    padding: 20px 0;
+
+    @include media(1440) {
+      font-size: 40px;
+
+    }
+
+    strong {
+      font-weight: 400;
+    }
+
+    @include media(1100) {
+      font-size: 36px;
+    }
+
+    @include media(600) {
+      font-size: 26px;
+      padding: 20px 0;
+    }
+  }
+
+  &__button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+
+    @include media(1440) {
+      width: rem(260);
+      padding: 1rem;
+    }
+
+    @include media(1100) {
+      margin: 20px auto 0;
+    }
+  }
+}

@@ -2,17 +2,37 @@
   position: relative;
   padding-top: rem(204);
   padding-bottom: rem(314);
+
+  @media(min-width:1023px) and (max-width:1440px) {
+    padding-top: rem(150);
+    padding-bottom: rem(250);
+  }
+
   @include media(768) {
     padding-top: rem(268);
     padding-bottom: rem(60);
   }
+
   @include media(490) {
-    padding-top: rem(164);
-    padding-bottom: rem(30);
+    padding-top: 0;
+    padding-bottom: 0;
   }
+
   // .promo__container
   &__container {
+    max-width: 1500px;
+
+    @include media(1440) {
+      max-width: 1340px;
+    }
+
+    @include media(490) {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
   }
+
   // .promo__content
   &__content {
     position: relative;
@@ -20,41 +40,71 @@
     flex-direction: column;
     row-gap: rem(40);
     z-index: 2;
+
+    @media(min-width:1023px) and (max-width:1440px) {
+      padding-left: 3vw;
+    }
+
     @include media(490) {
       row-gap: rem(20);
+      // position: absolute;
+      // left: 15px;
+      // right: 15px;
+      // bottom: 13vh;
+      order: 2;
+      margin-top: -100px;
+      padding: rem(20);
+      padding-bottom: rem(60);
     }
   }
+
   // .promo__title
   &__title {
     max-width: rem(583);
+
+
+    @include media(490) {
+      font-size: rem(28);
+      line-height: prc(34, 24);
+    }
   }
+
   // .promo__list
   &__list {
+    @include media(490) {
+      max-width: 270px;
+    }
   }
+
   // .promo__item
   &__item {
     display: flex;
     align-items: center;
     column-gap: rem(16);
+    margin-bottom: 10px;
   }
+
   // .promo__item-icon
-  &__item-icon {
-  }
+  &__item-icon {}
+
   // .promo__item-text
   &__item-text {
     font-size: rem(21);
     line-height: prc(31, 21);
+
     @include media(490) {
-      font-size: rem(16);
-      line-height: prc(24, 16);
+      font-size: 14px;
+      line-height: prc(20, 14);
     }
   }
+
   // .promo__button
   &__button {
     @include media(490) {
       width: 100%;
     }
   }
+
   // .promo__image-ibg
   &__image-ibg {
     position: absolute;
@@ -62,8 +112,10 @@
     right: 0;
     height: 100%;
     width: 50%;
+
     @include media(768) {
       width: 100%;
+
       &::before {
         content: "";
         position: absolute;
@@ -74,7 +126,19 @@
         height: 100%;
         background: linear-gradient(to bottom, rgba(#fff, 0) 16%, rgba(#fff, 96%) 100%);
       }
+
+      @include media(490) {
+        position: relative;
+        order: 1;
+
+        img {
+          position: relative;
+          // min-height: calc(95vh - 85px);
+          height: auto;
+        }
+      }
     }
+
     img {
       object-position: top;
     }
