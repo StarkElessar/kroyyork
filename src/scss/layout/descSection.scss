@@ -21,19 +21,20 @@
     color: #141414;
     text-align: center;
     font-family: Rawline;
-    @include adaptiveClamp('font-size', 32, 28, 1920, 768, 1);
+    @include adaptiveClamp('font-size', 28, 16, 1920, 768, 1);
     line-height: prc(46, 32);
     font-weight: 400;
+    text-transform: uppercase;
 
     @media(min-width:1023px) and (max-width:1440px) {
-      max-width: 650px;
-      font-size: 26px;
+      max-width: rem(820);
+      font-size: 21px;
       line-height: 200%;
     }
 
     @include media(540) {
-      font-size: rem(16);
-      line-height: prc(26, 16);
+      font-size: rem(14);
+      line-height: prc(26, 14);
       margin-bottom: rem(30);
     }
   }
@@ -100,7 +101,7 @@
       height: rem(3);
 
       .swiper-pagination-progressbar-fill {
-        background-color: #fff;
+        background-color: #141414;
       }
 
     }
@@ -112,7 +113,7 @@
       left: 0;
       width: 100%;
       height: rem(1);
-      background-color: #fff;
+      background-color: #141414;
     }
   }
 }

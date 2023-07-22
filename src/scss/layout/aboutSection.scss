@@ -183,11 +183,11 @@
     padding-bottom: rem(12);
 
     @include media(1440) {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     @include media(490) {
-      font-size: rem(26);
+      font-size: rem(16);
       padding-bottom: rem(5);
     }
   }

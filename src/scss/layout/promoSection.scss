@@ -28,6 +28,8 @@
 
     @include media(490) {
       padding: 0;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -45,16 +47,21 @@
 
     @include media(490) {
       row-gap: rem(20);
-      position: absolute;
-      left: 15px;
-      right: 15px;
-      bottom: 13vh;
+      // position: absolute;
+      // left: 15px;
+      // right: 15px;
+      // bottom: 13vh;
+      order: 2;
+      margin-top: -100px;
+      padding: rem(20);
+      padding-bottom: rem(60);
     }
   }
 
   // .promo__title
   &__title {
     max-width: rem(583);
+
 
     @include media(490) {
       font-size: rem(28);
@@ -86,8 +93,8 @@
     line-height: prc(31, 21);
 
     @include media(490) {
-      font-size: rem(18);
-      line-height: prc(24, 16);
+      font-size: 14px;
+      line-height: prc(20, 14);
     }
   }
 
@@ -122,10 +129,11 @@
 
       @include media(490) {
         position: relative;
+        order: 1;
 
         img {
           position: relative;
-          min-height: calc(95vh - 85px);
+          // min-height: calc(95vh - 85px);
           height: auto;
         }
       }

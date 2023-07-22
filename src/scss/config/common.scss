@@ -1,9 +1,10 @@
 // Заголовки, общие БЄМ блоки и проче...
 .title {
   font-weight: 400;
-  font-size: rem(46);
-  line-height: prc(56, 46);
+  font-size: rem(40);
+  line-height: prc(50, 40);
   font-family: Rawline;
+  text-transform: uppercase;
 
   @include media(1440) {
     font-size: 32px;
@@ -14,11 +15,12 @@
   }
 
   @include media(490) {
-    font-size: rem(24);
+    font-size: 21px !important;
     line-height: prc(34, 24);
   }
 }
 
+//
 .icon-check {
   flex: 0 0 rem(36);
   height: rem(36);
