@@ -87,7 +87,13 @@
     &_phone {}
 
     // .header__link_whatsapp
-    &_whatsapp {}
+    &_whatsapp {
+      margin-right: -30px;
+
+      @include media(1380) {
+        margin-right: 0;
+      }
+    }
   }
 
   // .header__link-icon

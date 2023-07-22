@@ -70,3 +70,8 @@
     height: rem(280);
   }
 }
+
+.grecaptcha-badge {
+  pointer-events: none;
+  opacity: 0;
+}
