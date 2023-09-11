@@ -7,7 +7,7 @@ const burgerButton = document.querySelector('.icon-menu')
 const menu = document.querySelector('.menu')
 const lockPaddingElements = document.querySelectorAll('[data-lp]')
 const firstSlider = document.querySelector('.slider-desc')
-
+const collectionSlider = document.querySelector('.slider-collection')
 export {
   html,
   body,
@@ -18,4 +18,5 @@ export {
   menu,
   lockPaddingElements,
   firstSlider,
+  collectionSlider
 }

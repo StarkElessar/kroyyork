@@ -118,12 +118,8 @@
 
   // .header__link-text
   &__link-text {
-    font-size: rem(21);
+    font-size: rem(16);
     line-height: prc(31, 21);
-
-    @include media(1440) {
-      font-size: rem(18);
-    }
 
     @include media(1024) {
       display: none;

@@ -20,7 +20,7 @@ import {
   menuInit,
 } from './modules'
 
-import { firstSlider } from './helpers/elementsNodeList'
+import { collectionSlider, firstSlider } from './helpers/elementsNodeList'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -118,8 +118,49 @@ new Swiper('.slider-auto', {
   },
 })
 
+
+let collectionMobileSlider;
+const collectionSliderInit = () => {
+  if (window.innerWidth <= 768 && collectionSlider.dataset.mobile === 'false') {
+    collectionMobileSlider = new Swiper(collectionSlider, {
+      modules: [Pagination],
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      direction: 'horizontal',
+      spaceBetween: 15,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
+      breakpoints: {
+
+        320: {
+          spaceBetween: 10,
+        },
+        // when window width is >= 480px
+        480: {
+          spaceBetween: 15,
+        }
+      }
+    })
+
+    collectionSlider.dataset.mobile = 'true'
+  }
+  if (window.innerWidth > 768) {
+    collectionSlider.dataset.mobile = 'false'
+
+    if (collectionSlider.classList.contains('swiper-initialized')) {
+      collectionMobileSlider.destroy()
+    }
+  }
+}
+
+
+
+collectionSliderInit();
 mobileSliderInit()
 
 window.addEventListener('resize', () => {
   mobileSliderInit()
+  collectionSliderInit();
 })

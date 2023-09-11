@@ -100,6 +100,40 @@
         </section>
         <?php endwhile; ?>
       <?php endif; ?>
+      <!-- Коллекция -->
+      <?php if( have_rows('collection') ): ?>
+        <?php while( have_rows('collection') ): the_row();?>
+        <section class="page__collection collection">
+          <div class="collection__container">
+            <h2 class="collection-content__title title"><?php the_sub_field('collection_title');?></h2>
+            <p class="collection__text"><?php the_sub_field('collection_text');?></p>
+            <button class="collection__button button" type="button" data-type="offerPopup">
+              <?php the_sub_field('collection_btn');?>
+            </button>
+            <div class="collection__media slider-collection swiper" data-mobile="false">
+              <div class="slider-collection__wrapper swiper-wrapper">
+              <?php if( have_rows('slider') ): ?>
+                <?php while( have_rows('slider') ): the_row();
+                      $images = get_sub_field('images');
+                ?>
+                <div class="slider-collection__box swiper-slide">
+                  <div class="slider-collection__image-ibg swiper-slide">
+                    <?php echo wp_get_attachment_image( $images, 'full'); ?>
+                  </div>
+                  <div class="slider-collection__price">
+                    <strong>Розничная цена</strong>
+                    <span><?php the_sub_field('price');?></span>
+                  </div>
+                </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
+              </div>
+              <div class="slider-collection__progress-bar swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <?php endwhile; ?>
+      <?php endif; ?>
       <!-- про материал -->
       <?php if( have_rows('lama') ): ?>
         <?php while( have_rows('lama') ): the_row(); 
@@ -182,8 +216,8 @@
                 <?php while( have_rows('offer_box') ): the_row(); ?>
                   <div class="about-content__offer-item">
                     <span class="about-content__offer-icon">
-                      <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25.1666 1.75L9.12492 17.7917L1.83325 10.5" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M29.1668 8.75L13.1252 24.7917L5.8335 17.5" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </span>
                     <span class="about-content__offer-text">

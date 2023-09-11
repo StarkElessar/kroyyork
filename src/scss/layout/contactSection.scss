@@ -1,7 +1,7 @@
 .contact-form {
   position: relative;
   padding: rem(100) 0;
-  background-color: $grayColor;
+  background-color: #F3F3F3;
 
   @include media(920) {
     padding-top: rem(60);
@@ -27,11 +27,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: prc(800, 1920);
+    max-width: 950px;
+    width: 100%;
     height: 100%;
 
-    @media(min-width:1023px) and (max-width:1440px) {
+    @include media(1600) {
       width: 55%;
+    }
+
+    @include media(1200) {
+      width: 45%;
     }
 
     @include media(920) {
@@ -47,6 +52,8 @@
 
   // .contact-form__content
   &__content {
+    max-width: 970px;
+    width: 100%;
     flex: 0 0 rem(505);
     margin-left: auto;
 
